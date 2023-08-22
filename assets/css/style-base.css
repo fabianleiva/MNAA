@@ -1,0 +1,410 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Monument Grotesk Mono";
+  color: black;
+  text-decoration: none;
+  list-style: none;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+header {
+  grid-area: header;
+}
+
+aside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 3rem;
+  margin-top: 1rem;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.website-name {
+  display: none;
+}
+
+.logo {
+  height: 1.6rem;
+  padding: 0rem 1rem 0rem 1rem;
+}
+
+.logo:hover {
+  animation: jello-horizontal 0.9s both;
+}
+
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+aside a {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.burger-icon {
+  display: flex;
+  align-items: center;
+}
+
+.burger-icon img {
+  padding: 0rem 1rem 0rem 1rem;
+  max-height: 0.8rem;
+}
+
+.burger-icon img:hover {
+  transform: scale(1.1);
+}
+
+.burger-index {
+  display: none;
+}
+
+.burger-links a {
+  display: flex;
+  font-size: 0.8rem;
+  margin: 0rem 0.5rem 0rem 0.5rem;
+}
+
+menu {
+  display: flex;
+  align-items: center;
+}
+
+menu ul {
+  display: flex;
+  align-items: baseline;
+}
+
+main {
+  grid-area: main;
+}
+
+.section-name {
+  display: flex;
+  justify-content: center;
+  font-size: 0.75rem;
+  margin-top: 2rem;
+}
+
+.section-name-contacto {
+  display: flex;
+  justify-content: center;
+  font-size: 0.75rem;
+  margin-top: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0rem 1rem 0rem 1rem;
+}
+
+.content-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.content-item a {
+  display: flex;
+  justify-content: center;
+  width: 65%;
+  box-sizing: border-box;
+  overflow: clip;
+}
+
+.content-item img {
+  max-height: 45rem;
+  width: 100%;
+  max-width: 45rem;
+  transition: all 0.5s;
+}
+
+.content-item img:hover {
+  transform: scale(1.1);
+  filter: grayscale(75%);
+}
+
+.content-item span {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  max-width: 35rem;
+  max-height: 5rem;
+  margin-top: 0.5rem;
+}
+
+.foto-oficina {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.foto-oficina img {
+  max-height: 45rem;
+  width: 100%;
+  max-width: 45rem;
+}
+
+.text-oficina {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 100%;
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  box-sizing: content-box;
+  max-width: 35rem;
+}
+
+footer {
+  background-color: rgb(240, 240, 240);
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  height: fit-content;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.content-contacto {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0rem 1rem 0rem 1rem;
+}
+
+.text-direccion {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  box-sizing: content-box;
+}
+
+.text-contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  box-sizing: content-box;
+}
+
+.redes-sociales {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.redes-sociales a {
+  padding: 0rem 1rem 0rem 1rem;
+}
+
+@media screen and (min-width: 576px) {
+  .logo {
+    height: 1.8rem;
+  }
+  .burger-icon {
+    display: none;
+  }
+  .burger-index {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  .burger-links a {
+    font-size: 1rem;
+  }
+  .burger-links a:hover {
+    animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  @keyframes slide-top {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-5px);
+    }
+  }
+  .section-name {
+    font-size: 1rem;
+  }
+  .section-name-contacto {
+    font-size: 1rem;
+  }
+  .content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+  .content-item {
+    max-width: 40%;
+  }
+  .content-item a {
+    width: 80%;
+    box-sizing: border-box;
+    overflow: clip;
+  }
+  .content-item span {
+    font-size: 0.85rem;
+  }
+  .text-oficina {
+    max-width: 100%;
+    font-size: 0.85rem;
+  }
+  .of-socios {
+    display: flex;
+    justify-content: space-between;
+  }
+  .max {
+    width: 48%;
+  }
+  .stefano {
+    width: 48%;
+  }
+  .of-equipo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contacto {
+    width: 100%;
+  }
+  .content-contacto {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+  }
+  .text-direccion {
+    max-width: 20rem;
+    font-size: 0.85rem;
+  }
+  .text-contacto {
+    max-width: 20rem;
+    font-size: 0.85rem;
+  }
+  .text-contacto p {
+    text-align: end;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    grid-template-columns: 1fr 20fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "header main"
+      "header main"
+      "footer footer";
+  }
+  aside {
+    flex-direction: column;
+  }
+  .logo {
+    margin-bottom: 2rem;
+    height: 2rem;
+  }
+  .website-name {
+    display: block;
+    text-align: start;
+    margin: 0rem 0rem 2rem 1rem;
+    font-weight: bolder;
+    font-size: 1rem;
+  }
+  .title {
+    flex-direction: column;
+  }
+  .burger-links {
+    flex-direction: column;
+  }
+  .burger-links li {
+    margin-bottom: 0.5rem;
+  }
+  .burger-links a:hover {
+    animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  @keyframes slide-right {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(10px);
+    }
+  }
+  menu {
+    width: 100%;
+    margin-left: 1rem;
+  }
+  .of-equipo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .of-equipo p {
+    margin: 0rem 1.5rem 0rem 0rem;
+  }
+  .content-item {
+    max-width: 25%;
+  }
+  .content-item a {
+    width: 80%;
+    box-sizing: border-box;
+    overflow: clip;
+  }
+  .section-name-contacto {
+    justify-content: flex-start;
+    margin-left: 1rem;
+  }
+}
