@@ -272,6 +272,12 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+  header {
+    background-color: transparent;
+  }
+  .navbar {
+    background-color: transparent;
+  }
   .nav-menu {
     z-index: 1;
   }
