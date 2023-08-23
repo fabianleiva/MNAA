@@ -14,6 +14,7 @@
 .container {
   height: 100vh;
   display: grid;
+  grid-template-columns: auto;
   grid-template-rows: auto auto auto;
   grid-template-areas:
     "header"
@@ -97,6 +98,11 @@ main {
   display: flex;
   justify-content: center;
   max-width: 100%;
+  max-height: 100%;
+}
+
+.news {
+  max-height: 100%;
 }
 
 .content {
@@ -104,6 +110,7 @@ main {
   grid-template-columns: auto;
   margin: 0 24px;
   justify-content: center;
+  max-height: 100%;
 }
 
 .content-item {
@@ -124,8 +131,7 @@ main {
 
 .content-item img {
   max-height: 45rem;
-  width: 100%;
-  max-width: 45rem;
+  max-width: 100%;
   transition: all 0.5s;
 }
 
@@ -135,8 +141,8 @@ main {
 }
 
 .caption {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 0.9rem;
+  line-height: 1.2;
   max-width: 70%;
   height: 5rem;
   margin-top: 0.5rem;
@@ -144,8 +150,8 @@ main {
 
 .caption-clasification {
   display: flex;
-  font-size: 0.85rem;
-  line-height: 1.5;
+  font-size: 0.9rem;
+  line-height: 1;
   max-width: 70%;
   margin: 0.5rem 0 0 0;
 }
@@ -227,6 +233,7 @@ main {
 footer {
   grid-area: footer;
   width: 100%;
+  max-height: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -271,18 +278,10 @@ footer {
   .content {
     max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 30%);
-    grid-template-rows: repeat(3, 600px);
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(1, 15%);
   }
-  .content-item:is(
-      :nth-child(1),
-      :nth-child(4),
-      :nth-child(6),
-      :nth-child(5),
-      :nth-child(8),
-      :nth-child(11),
-      :nth-child(15)
-    ) {
+  .content-item:is(:nth-child(2), :nth-child(8), :nth-child(12)) {
     grid-column: span 2;
     grid-row: span 2;
     margin: 0.25rem;
@@ -290,7 +289,6 @@ footer {
   .caption {
     max-width: 90%;
   }
-
   .caption-clasification {
     align-items: flex-start;
     width: 100%;
@@ -348,16 +346,10 @@ footer {
   .content {
     max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(4, 750px);
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(1, 15%);
   }
-  .content-item:is(
-      :nth-child(1),
-      :nth-child(4),
-      :nth-child(7),
-      :nth-child(10),
-      :nth-child(14)
-    ) {
+  .content-item:is(:nth-child(6), :nth-child(9)) {
     grid-column: span 3;
     grid-row: span 1;
     margin: 0.25rem;
